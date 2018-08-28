@@ -23,5 +23,6 @@ this text is after the one above
 # Cauliflower Soup
 * Head of Cauliflower
 * Roast Cauliflower with olive oil and spies
-* Sautee Onion, 
-*
+* Sautée Onions, peppers, add veggie broth
+* Continue to boil until everything is soft
+* Blend all into Soup
