@@ -13,3 +13,15 @@
 hello this is important Nicole
 
 this text is after the one above
+
+[click here for google.com](http://www.google.com)
+
+![impossible app](full web address link here)
+
+![impossible app](homework/nameofphoto.jpg)
+
+# Cauliflower Soup
+* Head of Cauliflower
+* Roast Cauliflower with olive oil and spies
+* Sautee Onion, 
+*
