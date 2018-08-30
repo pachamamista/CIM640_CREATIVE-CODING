@@ -1,16 +1,16 @@
 # CIM640 - Fall 2018
 
-## heading
+## Homework Assignment 1 • Nicole Andujar
 
-### heading
+### THE IMPOSSIBLE APP
 
-#### heading
+#### 
 
 ##### heading
 
 ###### heading
 
-hello this is important Nicole
+This app will scour the campus for free parking spaces and allow you to browse, select and reserve a parking space nearest to your selected buildign location.
 
 this text is after the one above
 
