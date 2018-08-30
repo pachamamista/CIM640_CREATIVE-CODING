@@ -23,6 +23,6 @@ The app allows you to Register your information and will prompt you to **turn on
 
 ![Screen 5 Settings](https://github.com/pachamamista/CIM640_CREATIVE-CODING/blob/master/Homework/Assingment%201/1x/Artboard%205.png)
 
-![Screen 6 Find my Space](https://github.com/pachamamista/CIM640_CREATIVE-CODING/blob/master/Homework/Assingment%201/1x/Artboard%205.png)
+![Screen 6 Find my Space](https://github.com/pachamamista/CIM640_CREATIVE-CODING/blob/master/Homework/Assingment%201/1x/Artboard%206.png)
 
-![Screen 7 Success Page](https://github.com/pachamamista/CIM640_CREATIVE-CODING/blob/master/Homework/Assingment%201/1x/Artboard%205.png)
+![Screen 7 Success Page](https://github.com/pachamamista/CIM640_CREATIVE-CODING/blob/master/Homework/Assingment%201/1x/Artboard%207.png)
