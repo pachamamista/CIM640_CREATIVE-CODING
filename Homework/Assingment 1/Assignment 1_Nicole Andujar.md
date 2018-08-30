@@ -15,11 +15,4 @@ The app allows you to Register your information and will prompt you to **turn on
 
 ![impossible app](https://github.com/pachamamista/CIM640_CREATIVE-CODING/blob/master/Homework/Assingment%201/1x/Artboard%201.png)
 
-![impossible app](Homework/Assignment&nbsp;1/Artboard&nbsp;1.jpg)
-
-# Cauliflower Soup
-* Head of Cauliflower
-* Roast Cauliflower with olive oil and spies
-* Sautée Onions, peppers, add veggie broth
-* Continue to boil until everything is soft
-* Blend all into Soup
+![impossible app](Homework/Assignment%201/1x/Artboard%201.png)

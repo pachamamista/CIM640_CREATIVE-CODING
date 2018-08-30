@@ -4,7 +4,7 @@
 
 ### THE IMPOSSIBLE APP
 
-#### 
+####
 
 ##### heading
 
@@ -16,7 +16,7 @@ this text is after the one above
 
 [click here for google.com](http://www.google.com)
 
-![impossible app](full web address link here)
+![impossible app](![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
 
 ![impossible app](homework/nameofphoto.jpg)
 
