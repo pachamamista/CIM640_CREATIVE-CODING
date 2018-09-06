@@ -1,6 +1,6 @@
 # CIM640 - Fall 2018
 
-## Homework Assignment 1 • Nicole Andujar
+## Notes Class 8/30/2018
 
 ### THE IMPOSSIBLE APP
 
@@ -10,19 +10,7 @@
 
 ###### heading
 
-This app will scour the campus for free parking spaces and allow you to browse, select and reserve a parking space nearest to your selected buildign location.
-
-this text is after the one above
-
-[click here for google.com](http://www.google.com)
-
-![impossible app](![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
-
-![impossible app](homework/nameofphoto.jpg)
-
-# Cauliflower Soup
-* Head of Cauliflower
-* Roast Cauliflower with olive oil and spies
-* Sautée Onions, peppers, add veggie broth
-* Continue to boil until everything is soft
-* Blend all into Soup
+When drawing an object, we want to make sure
+you want to keep it on the same horizontal axis
+but what determines the horizontal? The x location
+syntax: ellipse(x,y,w,h);
