@@ -4,62 +4,66 @@ var b = 'b';
 var word1 = "word";
 var trueFalse = true;
 var sentences = "I'm a sentence";
-var setupVariable = 5;
-var charColor = 'orange';
-var eyeSize = 40;
+
 var facePosX = 120;
+var facePosY = 50;
 
 function setup() {
   // put setup code here
-createCanvas(400,400);
-background(245);
-background(12,200,185);
-background("orange");
-background("#565433");
-background(12,200,185);
+  createCanvas(400,400);
+  background(0);
+  background(255,255,255);
+  background("orange");
+  background("#333333");
+
+  console.log(a + num1);
+  console.log(a-num1);
+  console.log(a + b);
+  //Single line comment
+  //console.log(a * b);
+
+  /*
+  Block of comments
+  */
+
+  //this is only in setup scope, only available in setup
+  var setupVariable = 5;
 }
 
-console.log(a+num1);
-console.log(a-num1);
-console.log(a + b);
-//single line comment
-
-//console.log(a+b);
-
-/*
-Block of Comments
-*/
-
 function draw() {
-  // put drawing code here
-stroke('white');
-strokeWeight(num1);
+  // put drawing code here();
+
+  background ("white");
+    facePosX = mouseX;
+    facePosY = mouseY;
+
+  stroke('black');
+  strokeWeight(num1);
 //does not work, setupVariable's scope is only in the setup.
-//strokeWeight(setupVariable);
+//  strokeWeight(setupVariable);
 
-fill(charColor);
+
+  fill('orange');
 //eyes
-  ellipse(facePosX,120,eyeSize,eyeSize);
-  ellipse(200,facePosX,eyeSize,eyeSize);
+  ellipse(120,120,50,50);
+  ellipse(180,120,50,50);
 
-//pupils
-    ellipse(120,facePosX,20,20);
-  ellipse(200,120,20,20);
+//mouth
+  rect(120,320,180,20);
 
-  //mouth
+//mole
+  stroke('green');
   strokeWeight(5);
- rect(70,275,200,20);
-/**
+  point(width/2, height/2);
 
-line(70,70,25,70);
-
-**/
-
-point(width/2, height/2);
-
+  line(120,330,300,330);
 
 //pacperson
-  arc(100,200,100,100,QUARTER_PI, TWO_PI - QUARTER_PI);
+  arc(facePosX + 100, facePosY + 100,100,100,QUARTER_PI, TWO_PI - QUARTER_PI);
 
+}
+
+function mousePresssed(){
+charColor = "blue";
 
 }
