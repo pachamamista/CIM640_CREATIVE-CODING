@@ -42,7 +42,7 @@ ellipse(650, 250, b, b);
 
 
 //ears
-fill(colorC);
+fill(colorB);
 stroke(colorB);
 triangle(580, 100, 640, 160, 580, 185);
 triangle(700, 100, 720, 185, 655, 165);
