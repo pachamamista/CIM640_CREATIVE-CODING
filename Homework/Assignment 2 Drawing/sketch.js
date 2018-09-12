@@ -1,76 +1,11 @@
-/** var a = 400;
-var b = 700 - a;
-var newColor = "red";
 
 
 
-function setup(){
-	createCanvas(900,750);
-  rectMode(CENTER);
-}
-function draw(){
-	background(230);
-
-	// move the origin to the pivot point
-	translate(a, b);
-	// then rotate the grid around the pivot point by a
-	// number of degrees equal to the frame count of the sketch
-	rotate(radians(frameCount));
-
-	// and draw the square at the origin
-	fill('green');
-strokeWeight(0);
-  rect(0, 0, 150, 150);
-
-  // move the origin to the pivot point
-	translate(100, 100);
-
-	// then rotate the grid around the pivot point by a
-	// number of degrees equal to the frame count of the sketch
-	rotate(radians(frameCount));
-
-	// and draw the square at the origin
-	fill('#ff581d');
-strokeWeight(0);
-  rect(0, 0, 100, 100);
-
-  //mole
-    stroke('red');
-    strokeWeight(10);
-    point(width/4, height/4);
-
-    line(70,a,250,270);
-
-}
-**/
-
-
-
-/**
-function setup(){
-	createCanvas(400, 400);
-	rectMode(CENTER);	// now the first two arguments of a rect are its center point, not corner
-}
-function draw(){
-	background(240);
-
-	// move the origin to the pivot point
-	translate(150, 150);
-
-	// then rotate the grid around the pivot point by a
-	// number of degrees equal to the frame count of the sketch
-	rotate(radians(frameCount));
-
-	// and draw the square at the origin
-	fill('#ff581d');
-	strokeWeight(0);
-	rect(0, 0, 100, 100);
-}
-
-**/
 
 var a = 125;
 var b = a + 75; //200
+var c = 300;
+var d = c + 400; //700
 var colorA = '#f26d7d'; //pink
 var colorB = '#000000'; //black
 var colorC = '#c2f33f'; //green
@@ -79,7 +14,7 @@ var strColor = (219, 238, 237);//LTgreen
 
 
 function setup() {
- createCanvas(1350,700);
+ createCanvas(1350,d);
  strokeWeight(3);
 
  background('#bfbeac');
@@ -90,11 +25,11 @@ function draw() {
 stroke(colorDW);
 //body
 fill (colorB);
-ellipse(675, 450, 300, 300);
+ellipse(675, 450, c, c);
 
 //head
 fill(colorB);
-ellipse(650, 250, 200, 200);
+ellipse(650, 250, b, b);
 
 
 //ears
@@ -106,8 +41,8 @@ triangle(700, 100, 720, 185, 655, 165);
 //eyes
 fill (colorC);
 stroke(colorDW);
-ellipse(625, 200, 50, 50);
-ellipse(665, 200, 50, 50);
+ellipse(625, b, 50, 50);
+ellipse(665, b, 50, 50);
 
 //eye line
 stroke(colorB);
@@ -159,13 +94,6 @@ fill (colorDW);
 stroke(colorB);
 ellipse(625, 600, 80, 80);
 ellipse(725, 600, 80, 80);
-
-// move the origin to the pivot point
-	translate(b, b+a);
-
-	// then rotate the grid around the pivot point by a
-	// number of degrees equal to the frame count of the sketch
-//	rotate(radians(frameCount));
 
 
 
