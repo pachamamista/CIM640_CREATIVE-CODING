@@ -11,17 +11,24 @@ var colorB = '#000000'; //black
 var colorC = '#c2f33f'; //green
 var colorDW = '#ffffff'; //white
 var strColor = (219, 238, 237);//LTgreen
+var bgColor = '#bfbeac';
 
 
 function setup() {
  createCanvas(1350,d);
  strokeWeight(3);
+ background(bgColor);
 
- background('#bfbeac');
 }
 
 
 function draw() {
+	background(bgColor);
+	//interface
+	textSize(16);
+	text("This is my cat Mambe!",50,30);
+
+
 stroke(colorDW);
 //body
 fill (colorB);
@@ -67,11 +74,13 @@ arc(605, 290, 70, 15, 0, QUARTER_PI+HALF_PI);
 arc(655, 280, 70, 25, 0, QUARTER_PI+HALF_PI);
 
 //whiskers right
+stroke(colorDW);
 line(740, 225, 680, 250);
 line(740, 250, 680, 250);
 line(740, 275, 680, 250);
 
 //whiskers left
+stroke(colorDW);
 line(610, 250, 550, 225);
 line(610, 250, 550, 250);
 line(610, 250, 550, 275);
