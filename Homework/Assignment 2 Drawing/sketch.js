@@ -12,6 +12,7 @@ var colorC = '#c2f33f'; //green
 var colorDW = '#ffffff'; //white
 var strColor = (219, 238, 237);//LTgreen
 var bgColor = '#bfbeac';
+var strCWeight = (0);
 
 
 function setup() {
@@ -25,10 +26,11 @@ function setup() {
 function draw() {
 	background(bgColor);
 	//interface
-	textSize(16);
-	text("This is my cat Mambe!",50,30);
+	strokeWeight(strCWeight);
+	textSize(30);
+		text("This is my cat Mambe!",50,50);
 
-
+strokeWeight(3);
 stroke(colorDW);
 //body
 fill (colorB);
@@ -49,12 +51,12 @@ triangle(700, 100, 720, 185, 655, 165);
 fill (colorC);
 stroke(colorDW);
 ellipse(625, b, 50, 50);
-ellipse(665, b, 50, 50);
+ellipse(670, b, 50, 50);
 
 //eye line
 stroke(colorB);
 line(625, 210, 625, 190);
-line(660, 210, 660, 190);
+line(665, 210, 665, 190);
 
 //nose
 stroke(colorA);
