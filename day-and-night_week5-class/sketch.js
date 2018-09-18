@@ -27,18 +27,21 @@ moon = loadImage('assets/moon.png');
 
 function setup() {
   // put setup code here
-  createCanvas(700,400);
+  createCanvas(400,400);
 }
 
 function draw() {
-  fill(r,g,b);
-rect(rectX,rectY,rectSize,rectSize);
 
+  fill(r,g,b);
+  rect(rectX,rectY,rectSize,rectSize);
 }
 
 function mousePresssed(){
-r = random(0,256);
-g = random(0,256);
-b = random(0,256);
 
+  if(mouseX > rectX && mouseX < rectX + rectSize && mouseY > rectY && mouseY < rectY + rectSize){
+//    console.log("DOES IT WORK");
+    r = random(0,256);
+    g = random(0,256);
+    b = random(0,256);
+}
 }
