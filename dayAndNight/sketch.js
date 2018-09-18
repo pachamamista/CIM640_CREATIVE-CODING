@@ -2,6 +2,17 @@ var sun;
 var moon;
 var bgColor=('yellow');
 
+var r = 255;
+var g = 255;
+var b = 255;
+
+var cX = 50;
+var cY = 50;
+var cEdge = 20;
+
+var rectX = 50;
+var rectY = 75;
+var rectSize = 100;
 
 function preload(){
 //preload goes above setup and will be used and loaded before project starts
@@ -21,8 +32,9 @@ function setup() {
 
 function draw() {
   // put drawing code here
-  background(bgColor);
-//console.log("mouseX: " + mouseX + " mouseY: " + mouseY);
+  frameRate(3);
+  background(r,g,b);
+console.log("mouseX: " + mouseX + " mouseY: " + mouseY);
 
   //interface
   textSize(14);
@@ -39,20 +51,52 @@ text("Night", 400,360);
 if(true){}
 **/
 
-if(mouseX <= width/2){
-//  console.log("Day Side");
+if(mouseX > 0 && mouseX < width/2){
+//console.log("Day Side");
   image(sun,35,75);
   bgColor=('yellow');
 
 }
 
-if(mouseX >= width/2){
-//  console.log("Night Side");
+if(mouseX >= width/2 && mouseX < width){
+//console.log("Night Side");
   image(moon,350,75);
   bgColor=('blue');
 
-
 }
 
+ellipse (cX,cY,cEdge,cEdge);
+var cDist = dist(cX,cY,mouseX,mouseY);
+console.log("cDist: " + cDist);
+
+if(cDist < 10){
+r = 255;
+g = 0;
+b = 0;
+
+}else{
+  r = 255;
+  g = 255;
+  b = 255;
+}
+
+rect(rectX,rectY,rectSize,rectSize); //rectX = 50, rectY = 75, rectSize = 100;
+
+// if(mouseX > rectX && mouseX < rectX + rectSize){
+//   if(mouseY > rectX && mouseY < rectY + rectSize){
+//     console.log("In Here");
+//   }
+// }
+
+if(mouseX > rectX && mouseX < rectX + rectSize && mouseY > rectX && mouseY < rectY + rectSize)
+{
+console.log("In Here");
+r = random(256);
+g = random(0,256);
+b = random(256);
+}
+
+// fill(r,g,b);
+// rect(rectX,rectY,rectSize,rectSize);
 
 }
