@@ -1,6 +1,5 @@
 var sun;
 var moon;
-var bgColor=('yellow');
 
 var r = 255;
 var g = 255;
@@ -19,13 +18,8 @@ var sunShow = false;
 var sunButton;
 
 function preload(){
-//preload goes above setup and will be used and loaded before project starts
-//this loads our image into memory
-//find the image and keep it there til I want to use it
-
-sun = loadImage('assets/sun.png');
-moon = loadImage('assets/moon.png');
-
+  sun = loadImage('assets/sun.png');
+  moon = loadImage('assets/moon.png');
 }
 
 function setup() {
@@ -33,49 +27,62 @@ function setup() {
   createCanvas(400,400);
   sunButton = createButton("Press to show/hide sun");
   sunButton.position(500,100);
-  sunButton.mousePresssed(function(){
+  sunButton.mousePressed(function(){
     if(sunShow == false){
       sunShow = true;
-    }else {
+    }else{
       sunShow = false;
     }
   });
 }
 
-function draw(){
-background(0);
+function draw() {
+  background(255);
   fill(r,g,b);
   rect(rectX,rectY,rectSize,rectSize);
   imageMode(CENTER);
   image(sun,cX,cY,sun.width/4,sun.height/4);
 
-if(sunShow == true){
-  image(sun,300,200);
-}
+  if(sunShow == true){
+    image(sun, 300,200);
+  }
+
 }
 
+function mousePressed(){
 
-function mousePresssed(){
-  
   if(mouseX > rectX && mouseX < rectX + rectSize && mouseY > rectY && mouseY < rectY + rectSize){
-//console.log("DOES IT WORK");
     r = random(0,256);
     g = random(0,256);
     b = random(0,256);
+  }
+
+  var sunDist = dist(mouseX,mouseY,cX,cY);
+  console.log("sun Dist: " + sunDist);
+  if(sunDist < 40){
+    //show/hide sun image
+    if(sunShow == false){
+      sunShow = true;
+    }else{
+      sunShow = false;
+    }
+    console.log(sunShow);
+  }
+
 }
 
-var sunDist = dist(mouseX,mouseY,cX,cY);
-console.log("Sun Dist: " + sunDist);
-if(sunDist < 40){
-  //what we are doing when we click on this is show/hide sun image
-if(sunShow == false){
-  sunShow = true;
-}else {
-  sunShow = false;
-}
-  console.log(sunShow);
+function showImage(){
+  if(sunShow == false){
+    sunShow = true;
+  }else{
+    sunShow = false;
+  }
 
 }
-}
 
-//end of code
+
+
+
+
+
+//End of code
