@@ -11,8 +11,10 @@ var colorB = '#000000'; //black
 var colorC = '#c2f33f'; //green
 var colorDW = '#ffffff'; //white
 var strColor = (219, 238, 237);//LTgreen
-var bgColor = '#bfbeac';
+var bgColor = '#9edbe0';
 var strCWeight = (0);
+var eyesOpen =
+
 
 
 function setup() {
@@ -24,11 +26,37 @@ function setup() {
 
 
 function draw() {
-	background(bgColor); 
+	background(bgColor);
 	//interface
+
+  selection = createSelect();
+  selection.position(10,10);
+  selection.option("Eyes Open"); //every option needs a selection.option line
+  selection.option("Eyes Closed");
+  selection.changed(function(){
+
+  console.log(selection.value()); //console will show either sun or moon string
+  //if user chooses sun we want image to pop out
+
+  });
+
+
+submitButton = createButton("Reset");
+submitButton.position(10,50);
+submitButton.mousePressed(function(){
+
+  if(selection.value() == "Eyes Open"){
+    curImage = sun;
+  }
+  else if (selection.value() == "Eyes Closed"){
+    curImage = moon;
+
+});
+
+
 	strokeWeight(strCWeight);
 	textSize(30);
-		text("This is my cat Mambe!",50,50);
+		text("This is my cat Mambe!",10,150);
 	strokeWeight(3);
 
 //stroke(colorDW);
@@ -103,7 +131,5 @@ arc(905, 550, 60, 60, HALF_PI, PI);
 fill(colorDW);
 ellipse(625, 600, 80, 80);
 ellipse(725, 600, 80, 80);
-
-
 
 }
