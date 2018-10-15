@@ -4,7 +4,6 @@ var yPos = 230;
 var currentImage;
 var speed = 10;
 
-var colorDW = '#ffffff'; //white
 var speed = 10;
 
 var rectX = []; // start with empty list
@@ -34,6 +33,8 @@ var swatting = false;
 var catsXY = [];
 var catsImgArray = [];
 var makeItrain = false;
+
+var value = 0;
 
 function preload(){
   hearts=loadImage("assets/hearts.png");
@@ -65,7 +66,7 @@ function setup() {
   }
 
   selection = createSelect();
-  selection.position(20,45);
+  selection.position(20,110);
   selection.option(""); //every option needs a selection.option line
   selection.option("Ball of Yarn"); //every option needs a selection.option line
   selection.option("Mouse");
@@ -96,7 +97,7 @@ function setup() {
   });
 
   pressButton = createButton("Press to see what happens");
-  pressButton.position(20,70);
+  pressButton.position(20,145);
   pressButton.mousePressed(function(){
     swatting = true;
   })
@@ -104,7 +105,7 @@ function setup() {
   currentImage = blank;
 
   pressButton2 = createButton("Make it Rain Cats");
-  pressButton2.position(20,130);
+  pressButton2.position(20,200);
   pressButton2.mousePressed(function(){
   makeItrain = true;
   for(i = 0; i < catsImgArray.length; i++){
@@ -128,6 +129,8 @@ textSize(30);
 background(interior,100);
 
 image(frameArray[curCat],700,100);
+
+
 
 
 if(millis() - prevMillis> interval && swatting == true){
@@ -160,17 +163,35 @@ if(makeItrain) {
   }
 }
 
-
-text(colorDW);
 textSize (18);
-text("Hi there kitty! Select from the dropdown menu",20,30);
+fill(0);
+text("Hi there kitty!",20,30)
+text("What do you want to play with today?",20,60);
+text("Select an item from the menu below",20,90);
+
+
+fill(value);
+  ellipse(1320, 210, 150, 150);
+
+
+
+
 
   for (var i = 0; i < rectY.length; i++) {
     image(hearts,rectX[i], rectY[i]);
     rectY[i] += 1;
   }
 }
+
 function mousePressed() {
   rectX.push(mouseX);
   rectY.push(mouseY);
+}
+
+function mouseDragged() {
+  if (value === 0) {
+    value = 'rgba(255,255,255, 0.05)';
+  } else {
+    value = 0;
+  }
 }
