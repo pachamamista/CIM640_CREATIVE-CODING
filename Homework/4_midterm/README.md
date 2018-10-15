@@ -30,8 +30,8 @@ I have included the name of the sketch, the title and simple instructions for th
 
 
 #### 5 points of Interaction (15 Points - 3 Points each)
-buttons - I have 2 buttons 
-mouseX mouseY - For this, I also used mousePressed option where hearts drop down
-mousePressed - One mouse pressed option where hearts drop down
-keyPressed - 
-hitzones - The buttons act as hit zones. 
+## buttons - I have 2 buttons 
+## mouseX mouseY - For this, I also used mousePressed option where hearts drop down
+## mousePressed - One mouse pressed option where hearts drop down
+## keyPressed - 
+## hitzones - The buttons act as hit zones. 
