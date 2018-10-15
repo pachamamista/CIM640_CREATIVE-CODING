@@ -25,11 +25,12 @@ This project would be displayed in areas where kids would be waiting around
 so they don't get bored.
 
 
-####In your sketch, include a title and instruction (3 Points) background image (2 Points)
+####
+In your sketch, include a title and instruction (3 Points)
+background image (2 Points)
 
-
-###5 points of Interaction (15 Points - 3 Points each)
-##buttons: There are Two Buttons
+5 points of Interaction (15 Points - 3 Points each)
+buttons
 mouseX mouseY
 mousePressed
 keyPressed
