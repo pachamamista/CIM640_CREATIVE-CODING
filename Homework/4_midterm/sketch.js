@@ -42,6 +42,7 @@ function preload(){
   mouse=loadImage("assets/mouse.png")
   blank=loadImage("assets/blank.png")
   interior=loadImage("assets/interior.png");
+  myFont = loadFont('assets/Mali-Medium.ttf');
 
 
   for(var frames = 0; frames< frameAmounts; frames++){
@@ -97,15 +98,15 @@ function setup() {
   });
 
   pressButton = createButton("Press to see what happens");
-  pressButton.position(20,145);
+  pressButton.position(20,135);
   pressButton.mousePressed(function(){
     swatting = true;
   })
 
   currentImage = blank;
 
-  pressButton2 = createButton("Make it Rain Cats");
-  pressButton2.position(20,200);
+  pressButton2 = createButton("Make it Rain");
+  pressButton2.position(20,230);
   pressButton2.mousePressed(function(){
   makeItrain = true;
   for(i = 0; i < catsImgArray.length; i++){
@@ -123,8 +124,7 @@ function draw() {
   // put drawing code here
 createCanvas(1800,800);
 textSize(30);
-
-
+  textFont(myFont);
 // "#a8dbda"
 background(interior,100);
 
@@ -168,6 +168,10 @@ fill(0);
 text("Hi there kitty!",20,30)
 text("What do you want to play with today?",20,60);
 text("Select an item from the menu below",20,90);
+
+textSize (16);
+text("Wanna see something cool?",20,195);
+text("Press below!",20,220);
 
 
 fill(value);
