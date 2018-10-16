@@ -42,7 +42,7 @@ clicks, hearts will drop down.
 #### mousePressed
 Another mouse pressed option I have is to make it rain cats. This is fun :)
 
-### mouseDragged
+#### mouseDragged
 There is one hit zone that you drag your mouse over and an image appears below.
 
 
