@@ -32,9 +32,12 @@ I have included the name of the sketch, the title and simple instructions for th
 #### 5 points of Interaction (15 Points - 3 Points each)
 #### buttons
 I have 3 buttons, a mousePress and a mouseDragged
+One will make the cat's paw move (array), another will trigger the yarn to move,
+the other button will trigger the cat to swat and for a mouse to appear and move.
 
 #### mouseX mouseY
-For this, I also used mousePressed option where hearts drop down
+For this, I also used mousePressed option where hearts drop down. Anywhere the user
+clicks, hearts will drop down.
 
 #### mousePressed
 One mouse pressed option where hearts drop down
