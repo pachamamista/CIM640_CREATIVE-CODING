@@ -24,6 +24,7 @@ The target audience for this particular project are little kids
 This project would be displayed in areas where kids would be waiting around
 so they don't get bored.
 
+#### A display font was also used for the copy.
 
 #### In your sketch, include a title and instruction (3 Points) and a background image (2 Points)
 I have included the name of the sketch, the title and simple instructions for the user.
