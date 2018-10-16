@@ -40,10 +40,9 @@ For this, I also used mousePressed option where hearts drop down. Anywhere the u
 clicks, hearts will drop down.
 
 #### mousePressed
-One mouse pressed option where hearts drop down
+Another mouse pressed option I have is to make it rain cats. This is fun :)
 
 ### mouseDragged
 There is one hit zone that you drag your mouse over and an image appears below.
 
-#### hitzones
-The buttons act as hit zones.
+
