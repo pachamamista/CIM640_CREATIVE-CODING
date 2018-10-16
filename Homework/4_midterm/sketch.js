@@ -14,7 +14,7 @@ var frameAmounts = 3;
 var frameArray = [];
 var currentFrame = 0;
 
-var interval = 200;
+var interval = 100;
 var prevMillis = 0;
 
 var interval2 = 200;
@@ -43,6 +43,7 @@ function preload(){
   blank=loadImage("assets/blank.png")
   interior=loadImage("assets/interior.png");
   myFont = loadFont('assets/Mali-Medium.ttf');
+  myFontB = loadFont('assets/Mali-Bold.ttf');
 
 
   for(var frames = 0; frames< frameAmounts; frames++){
@@ -124,7 +125,6 @@ function draw() {
   // put drawing code here
 createCanvas(1800,800);
 textSize(30);
-  textFont(myFont);
 // "#a8dbda"
 background(interior,100);
 
@@ -165,7 +165,10 @@ if(makeItrain) {
 
 textSize (18);
 fill(0);
-text("Hi there kitty!",20,30)
+textFont(myFontB);
+text("Welcome to KITTY PARADISE! Hi there kitty!",20,30)
+
+textFont(myFont);
 text("What do you want to play with today?",20,60);
 text("Select an item from the menu below",20,90);
 
