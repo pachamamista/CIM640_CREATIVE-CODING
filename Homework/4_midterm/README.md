@@ -27,6 +27,7 @@ so they don't get bored.
 #### In your sketch, include a title and instruction (3 Points) and a background image (2 Points)
 #### A display font was also used for the instructions.
 I have included the name of the sketch, the title and simple instructions for the user.
+A background image is used for the living room. 
 
 
 #### 5 points of Interaction (15 Points - 3 Points each)
