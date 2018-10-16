@@ -35,6 +35,9 @@ I have 3 buttons, a mousePress and a mouseDragged
 One will make the cat's paw move (array), another will trigger the yarn to move,
 the other button will trigger the cat to swat and for a mouse to appear and move.
 
+#### selection.value
+Created a drop down menu with options
+
 #### mouseX mouseY
 For this, I also used mousePressed option where hearts drop down. Anywhere the user
 clicks, hearts will drop down.
