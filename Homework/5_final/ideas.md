@@ -6,9 +6,13 @@
 
 #### Document 3 potential ideas for your final.
 #### IDEA 1
-My first idea is to make a game where the user clicks on a button to start game and you see
-there are 3 birds on the side and instructions would say to catch feathers.
-Feathers start falling from the sky and as the user catches feathers, the birds start taking flight and once each bird has all his feathers, it flies away. Once all 3 birds get their feathers and fly away, user wins.
+My first idea is to make a game:
+• The user clicks on a button to start game.
+• On the screen you see there are 3 birds on the side and instructions would
+say to catch feathers.
+• Feathers start falling from the sky and as the user catches feathers,
+the birds start taking flight and once each bird has all his feathers, it flies away. 
+• Once all 3 birds get their feathers and fly away, user wins.
 
 #### IDEA 2
 Inputs are the drop down menu, mouse pressed and key pressed.
