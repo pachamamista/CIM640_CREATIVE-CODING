@@ -19,6 +19,6 @@ My second idea is to make an installation:
 With video capture, the user would step on a specified space and a kaleidoscope
 will show up and follow the user and move around according to their movements.
 Link(https://vimeo.com/86512038)
-
+Link('assets/kaleidoscope.png')
 
 #### Find and Link 3 examples of similar projects or projects that influence your project.
