@@ -19,6 +19,12 @@ My second idea is to make an installation:
 With video capture, the user would step on a specified space and a kaleidoscope
 will show up and follow the user and move around according to their movements.
 Link(https://vimeo.com/86512038)
-Link('assets/kaleidoscope.png')
+Link(https://github.com/pachamamista/CIM640_CREATIVE-CODING/blob/master/Homework/5_final/assets/kaleidoscope.png)
 
-#### Find and Link 3 examples of similar projects or projects that influence your project.
+#### IDEA 3
+My third idea is to make an installation:
+I am not sure how I would create this, the brainstorm we did last class was mostly about
+feathers and I got an idea from my class partner. I wanted to have feathers free-falling
+in an enclosed space which would be aligned with fans blowing air. Feathers would change colors based on light projection and then also they would stay up in the air by the
+air flow from the fans.
+Link(https://www.youtube.com/watch?v=1C_40B9m4tI)
