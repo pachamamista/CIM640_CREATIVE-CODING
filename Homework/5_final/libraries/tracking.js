@@ -1866,7 +1866,7 @@
     if (opt_colors) {
       opt_colors.forEach(function(color) {
         if (!tracking.ColorTracker.getColor(color)) {
-          throw new Error('Color not valid, try `new tracking.ColorTracker("magenta")`.');
+        //  throw new Error('Color not valid, try `new tracking.ColorTracker("magenta")`.');
         }
       });
       this.setColors(opt_colors);
@@ -1918,7 +1918,7 @@
    * @default ['magenta']
    * @type {Array.<string>}
    */
-  tracking.ColorTracker.prototype.colors = ['magenta'];
+  tracking.ColorTracker.prototype.colors = ['red'];
 
   /**
    * Holds the minimum dimension to classify a rectangle.
@@ -2243,17 +2243,19 @@
     return dx * dx + dy * dy + dz * dz < 6400;
   });
 
-  tracking.ColorTracker.registerColor('magenta', function(r, g, b) {
-    var threshold = 50,
-      dx = r - 255,
-      dy = g - 0,
-      dz = b - 255;
 
-    if ((r - g) >= threshold && (b - g) >= threshold) {
-      return true;
-    }
-    return dx * dx + dy * dy + dz * dz < 19600;
-  });
+
+  // tracking.ColorTracker.registerColor('magenta', function(r, g, b) {
+  //   var threshold = 50,
+  //     dx = r - 255,
+  //     dy = g - 0,
+  //     dz = b - 255;
+  //
+  //   if ((r - g) >= threshold && (b - g) >= threshold) {
+  //     return true;
+  //   }
+  //   return dx * dx + dy * dy + dz * dz < 19600;
+  // });
 
   tracking.ColorTracker.registerColor('yellow', function(r, g, b) {
     var threshold = 50,
@@ -2266,7 +2268,29 @@
     }
     return dx * dx + dy * dy + dz * dz < 10000;
   });
+  // tracking.ColorTracker.registerColor('red', function(r, g, b) {
+  //   var threshold = 10,
+  //     dx = r - 255,
+  //     dy = g - 0,
+  //     dz = b - 0;
+  //
+  //   if ((r - g) >= threshold && (b - g) >= threshold) {
+  //     return true;
+  //   }
+  //   return dx * dx + dy * dy + dz * dz < 19600;
+  // });
 
+  tracking.ColorTracker.registerColor('green', function(r, g, b) {
+    var threshold = 50,
+      dx = r - 0,
+      dy = g - 255,
+      dz = b - 10;
+
+    if ((r - g) >= threshold && (b - g) >= threshold) {
+      return true;
+    }
+    return dx * dx + dy * dy + dz * dz < 19600;
+  });
 
   // Caching neighbour i/j offset values.
   //=====================================
