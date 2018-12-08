@@ -30,6 +30,9 @@ var blueFeathers = [];
 
 var howtoplay;
 
+// var value = 1442;
+// var m = map(value, 320, 240, 1442, 845);
+
 
 function preload(){
   mountain=loadImage("assets/mountain.png");
@@ -38,9 +41,8 @@ function preload(){
   birdgreen=loadImage("assets/birdgreen.png");
   birdyellow=loadImage("assets/birdyellow.png");
   redFeatherImg = loadImage("assets/redf0.png");
-  yellFeatherImg = loadImage("assets/yellowf0.png");
+//  yellFeatherImg = loadImage("assets/yellowf0.png");
   blueFeatherImg = loadImage("assets/bluef1.png");
-  greenFeatherImg = loadImage("assets/greenf1.png");
   greenFeatherImg = loadImage("assets/greenf1.png");
   howtoplay = loadImage("assets/howtoplay.png");
 
@@ -50,24 +52,19 @@ function preload(){
 function setup() {
   createCanvas(900,600);
   capture = createCapture(VIDEO);
-  capture.size(320,240);
+  capture.size(1442,845);//(320,240);
   capture.id("myVideo");
-  // capture.hide();
+  //capture.hide();
+
 // Map video size to canvas size
+
+// var x1 = map(mouseX, 0, width, 25, 75);
+//  capture.size(x1, 25, 25, 25);
 // reverse the capture coordinates
+
   for(var i = 0; i < redFeatherAmount; i++){
     var currentFeather = {"x" : random(width), "y" : random(-250,-200), "image" : redFeatherImg, "caught" : false, "randomPos": 0};
     redFeathers.push(currentFeather);
-  }
-
-  for(var i = 0; i < yellFeatherAmount; i++){
-    var currentFeather = {"x" : random(width), "y" : random(-250,-200), "image" : yellFeatherImg, "caught" : false};
-    yellFeathers.push(currentFeather);
-  }
-
-  for(var i = 0; i < blueFeatherAmount; i++){
-    var currentFeather = {"x" : random(width), "y" : random(-250,-200), "image" : blueFeatherImg, "caught" : false};
-    blueFeathers.push(currentFeather);
   }
 
   for(var i = 0; i < greenFeatherAmount; i++){
@@ -75,6 +72,7 @@ function setup() {
     greenFeathers.push(currentFeather);
   }
 
+  console.log("redFeathers");
   console.log(redFeathers);
 
 
@@ -119,13 +117,14 @@ for(i = 0; i < greenfImgArray.length; i++){
       // No colors were detected in this frame.
     } else {
       event.data.forEach(function(rect) {
+        console.log("rect");
         console.log(rect);
         found = rect;
         // Begin yellow collide
-        featherCaught(yellFeathers, rect);
-      //  featherCaught(redFeathers, rect);
+      //  featherCaught(yellFeathers, rect);
+        featherCaught(greenFeathers, rect, "green");
+        featherCaught(redFeathers, rect, "red");
         //featherCaught(blueFeathers, rect);
-        featherCaught(greenFeathers, rect);
       });
     }
   });
@@ -139,7 +138,7 @@ for(i = 0; i < greenfImgArray.length; i++){
 function draw() {
 
   createCanvas(1442,845);
-  textSize(30);
+
 
   background(mountain,100);
   //image(capture, 0, 0, 320, 240);
@@ -175,6 +174,7 @@ function draw() {
       redFeathers[i]["x"] = 225;
       redFeathers[i]["y"] = 625;
       redFeathers[i]["randomPos"] = random(360);
+
     }
 
     if(redFeathers[i]["caught"] == false){
@@ -220,91 +220,77 @@ function draw() {
     image(birdgreen,700,575);
     //image(birdblue,330,450);
     //image(birdyellow,600,390);
+  }
 
-    // for(var i in yellFeathers){
-    //   image(yellFeathers[i]["image"], yellFeathers[i]["x"],yellFeathers[i]["y"]);
-    //
-    //   if(yellFeathers[i]["y"] > height){
-    //     yellFeathers[i]["y"] = random(-500,-300)
-    //   }
-    // var hit = collidePointRect(mouseX,mouseY,yellFeathers[i]["x"],yellFeathers[i]["y"],82,140);
-    //
-    // console.log(hit);
 
-    // if(hit == true){
-    //   yellFeathers[i]["caught"] = true;
-    // }
-    //
-    // if(yellFeathers[i]["caught"] == true){
-    //   yellFeathers[i]["x"] = mouseX;
-    //   yellFeathers[i]["y"] = mouseY;
-    // }else{
-    //   yellFeathers[i]["y"]++;
-    // }
+     for(var i in greenFeathers){
+       image(greenFeathers[i]["image"], greenFeathers[i]["x"],greenFeathers[i]["y"]);
+
+      if(greenFeathers[i]["y"] > height){
+        greenFeathers[i]["y"] = random(-450,-250)
+      }
+    var hit = collidePointRect(mouseX,mouseY,greenFeathers[i]["x"],greenFeathers[i]["y"],82,140);
+
+    console.log("hit");
+    console.log(hit);
+
+    if(hit == true){
+    greenFeathers[i]["caught"] = true;
+      greenFeathers[i]["x"] = 800;
+      greenFeathers[i]["y"] = 650;
+      greenFeathers[i]["randomPos"] = random(360);
+      push();
+      translate(greenFeathers[i]["x"],greenFeathers[i]["y"]);
+      rotate(greenFeathers[i]["randomPos"]);
+      image(greenFeathers[i]["image"], 0,0);
+      pop();
+      greenFeathers[i]["x"] = mouseX;
+      greenFeathers[i]["y"] = mouseY;
+    }else{
+      greenFeathers[i]["y"]++;
+    }
 
     }
 
-   //  for(var i in blueFeathers){
-   //    image(blueFeathers[i]["image"], blueFeathers[i]["x"],blueFeathers[i]["y"]);
-   //
-   //    if(blueFeathers[i]["y"] > height){
-   //      blueFeathers[i]["y"] = random(-500,-300)
-   //    }
-   //  var hit = collidePointRect(mouseX,mouseY,blueFeathers[i]["x"],blueFeathers[i]["y"],82,140);
-   //
-   // console.log(hit);
+    for(var i in redFeathers){
+      image(redFeathers[i]["image"], redFeathers[i]["x"],redFeathers[i]["y"]);
 
-    // if(hit == true){
-    //   blueFeathers[i]["caught"] = true;
-    // }
-    //
-    // if(blueFeathers[i]["caught"] == true){
-    //   blueFeathers[i]["x"] = mouseX;
-    //   blueFeathers[i]["y"] = mouseY;
-    // }else{
-    //   blueFeathers[i]["y"]++;
-    // }
+     if(redFeathers[i]["y"] > height){
+       redFeathers[i]["y"] = random(-450,-250)
+     }
+   var hit = collidePointRect(mouseX,mouseY,redFeathers[i]["x"],redFeathers[i]["y"],82,140);
 
-    //}
+   console.log("hit");
+   console.log(hit);
 
-   //  for(var i in greenFeathers){
-   //    image(greenFeathers[i]["image"], greenFeathers[i]["x"],greenFeathers[i]["y"]);
-   //
-   //    if(greenFeathers[i]["y"] > height){
-   //      greenFeathers[i]["y"] = random(-450,-250)
-   //    }
-   //  var hit = collidePointRect(mouseX,mouseY,greenFeathers[i]["x"],greenFeathers[i]["y"],82,140);
-   //
-   // console.log(hit);
-   //
-   //  if(hit == true){
-   //    greenFeathers[i]["caught"] = true;
-   //  }
-   //
-   //  if(greenFeathers[i]["caught"] == true){
-   //    greenFeathers[i]["x"] = mouseX;
-   //  greenFeathers[i]["y"] = mouseY;
-   //  }else{
-   //    greenFeathers[i]["y"]++;
-   //  }
-   //
-   //  }
+   if(hit == true){
+   redFeathers[i]["caught"] = true;
+     redFeathers[i]["x"] = 225;
+     redFeathers[i]["y"] = 625;
+     redFeathers[i]["randomPos"] = random(360);
+     push();
+     translate(redFeathers[i]["x"],redFeathers[i]["y"]);
+     rotate(redFeathers[i]["randomPos"]);
+     image(redFeathers[i]["image"], 0,0);
+     pop();
+     redFeathers[i]["x"] = mouseX;
+     redFeathers[i]["y"] = mouseY;
+   }else{
+     redFeathers[i]["y"]++;
+   }
 
-//}
+   }
 
 
-function keyPressed(){
-  if(keyCode === UP_ARROW){
-    redAmount+=1
+
+
+
+function featherCaught(feathers, rectPoint, color) {
+tempCoord = [800,650];
+  if(color == "red") {
+    tempCoord = [225,625];
   }
 
-  if(keyCode === DOWN_ARROW){
-    redAmount-=1
-  }
-
-  console.log(redAmount);
-}
-function featherCaught(feathers, rectPoint) {
   for(var i in feathers){
     image(feathers[i]["image"], feathers[i]["x"],feathers[i]["y"]);
 
@@ -313,17 +299,26 @@ function featherCaught(feathers, rectPoint) {
     }
   var hit = collidePointRect(rectPoint.x,rectPoint.y,feathers[i]["x"],feathers[i]["y"],82,140);
 
-  console.log(hit);
+  // console.log( hit + tempCoord[0] + tempCoord[1]);
+  // console.log( hit + tempCoord[0] + tempCoord[1]);
+
 
   if(hit == true){
+    console.log("hit hit hit");
     feathers[i]["caught"] = true;
-  }
+    feathers[i]["x"] = tempCoord[0];
+    feathers[i]["y"] = tempCoord[1];
+    greenFeathers[i]["randomPos"] = random(360);
+    redFeathers[i]["randomPos"] = random(360);
 
-  if(feathers[i]["caught"] == true){
-    feathers[i]["x"] = rectPoint.x;
-    feathers[i]["y"] = rectPoint.y;
+    push();
+    translate(feathers[i]["x"],feathers[i]["y"]);
+    rotate(feathers[i]["randomPos"]);
+    image(feathers[i]["image"], 0,0);
+    pop();
+
   }else{
-    feathers[i]["y"]++;
+  //  feathers[i]["y"]++;
   }
 
   }
